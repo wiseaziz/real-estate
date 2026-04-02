@@ -1,0 +1,1685 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أملاك خالد بن علي الضويان</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&family=Amiri:ital@0;1&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --bg0:#080a0e;
+  --bg1:#0d1117;
+  --bg2:#131920;
+  --bg3:#1a2330;
+  --bg4:#212e3d;
+  --gold:#c9a84c;
+  --gold2:#e8c97a;
+  --gold3:#f5e0a0;
+  --golddim:rgba(201,168,76,0.12);
+  --goldborder:rgba(201,168,76,0.25);
+  --text1:#f0e8d8;
+  --text2:#a89880;
+  --text3:#6b5d4a;
+  --green:#2ecc8a;
+  --greenbg:rgba(46,204,138,0.1);
+  --red:#e05c5c;
+  --redbg:rgba(224,92,92,0.1);
+  --amber:#e0a040;
+  --amberbg:rgba(224,160,64,0.1);
+  --blue:#5c9ee0;
+  --bluebg:rgba(92,158,224,0.1);
+  --r:6px;
+  --rlg:12px;
+  --rxl:18px;
+  --sidebar:260px;
+  --transition:all 0.25s cubic-bezier(0.4,0,0.2,1);
+}
+
+html{scroll-behavior:smooth}
+body{
+  font-family:'Tajawal',sans-serif;
+  background:var(--bg0);
+  color:var(--text1);
+  min-height:100vh;
+  font-size:14px;
+  line-height:1.7;
+  overflow-x:hidden;
+}
+
+/* ═══ SCROLLBAR ═══ */
+::-webkit-scrollbar{width:4px;height:4px}
+::-webkit-scrollbar-track{background:var(--bg1)}
+::-webkit-scrollbar-thumb{background:var(--goldborder);border-radius:4px}
+
+/* ═══ LAYOUT ═══ */
+.layout{display:flex;min-height:100vh}
+
+/* ═══ SIDEBAR ═══ */
+.sidebar{
+  width:var(--sidebar);
+  background:var(--bg1);
+  border-left:1px solid var(--goldborder);
+  display:flex;flex-direction:column;
+  position:fixed;right:0;top:0;bottom:0;
+  z-index:50;overflow-y:auto;
+}
+
+.brand{
+  padding:2rem 1.5rem 1.5rem;
+  border-bottom:1px solid var(--goldborder);
+  text-align:center;
+}
+.brand-ayah{
+  font-family:'Amiri',serif;
+  font-size:12px;color:var(--gold);
+  line-height:1.8;margin-bottom:1rem;
+  font-style:italic;
+  opacity:0.85;
+}
+.brand-name{
+  font-size:13px;font-weight:700;
+  color:var(--gold2);letter-spacing:0.5px;
+}
+.brand-sub{font-size:10px;color:var(--text3);margin-top:3px}
+
+.nav-section{padding:1.25rem 0}
+.nav-label{
+  font-size:9px;font-weight:700;
+  color:var(--text3);letter-spacing:2px;
+  padding:0 1.25rem;margin-bottom:0.5rem;
+  text-transform:uppercase;
+}
+.nav-item{
+  display:flex;align-items:center;gap:10px;
+  padding:10px 1.25rem;cursor:pointer;
+  color:var(--text2);font-size:13px;
+  border-right:3px solid transparent;
+  transition:var(--transition);
+  position:relative;
+}
+.nav-item:hover{background:var(--golddim);color:var(--gold2)}
+.nav-item.active{
+  background:var(--golddim);color:var(--gold2);
+  border-right-color:var(--gold);
+}
+.nav-icon{width:18px;text-align:center;font-size:15px;flex-shrink:0}
+
+.sidebar-footer{
+  margin-top:auto;padding:1rem 1.25rem;
+  border-top:1px solid var(--goldborder);
+}
+.conn-badge{display:flex;align-items:center;gap:8px;font-size:11px;color:var(--text3)}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--text3);flex-shrink:0}
+.dot.on{background:var(--green);box-shadow:0 0 6px var(--green)}
+
+/* ═══ MAIN ═══ */
+.main{margin-right:var(--sidebar);flex:1;padding:2rem;min-height:100vh}
+
+/* ═══ TOPBAR ═══ */
+.topbar{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:2rem;flex-wrap:wrap;gap:1rem;
+}
+.page-title{font-size:22px;font-weight:700;color:var(--gold2)}
+.page-sub{font-size:12px;color:var(--text3);margin-top:2px}
+
+/* ═══ PRIVACY TOGGLE ═══ */
+.privacy-btn{
+  display:flex;align-items:center;gap:8px;
+  padding:8px 16px;border-radius:var(--r);
+  border:1px solid var(--goldborder);
+  background:var(--bg2);color:var(--gold);
+  cursor:pointer;font-size:12px;font-family:'Tajawal',sans-serif;
+  transition:var(--transition);
+}
+.privacy-btn:hover{background:var(--golddim);border-color:var(--gold)}
+
+/* ═══ SETUP BANNER ═══ */
+.setup-banner{
+  background:linear-gradient(135deg,rgba(201,168,76,0.08),rgba(201,168,76,0.03));
+  border:1px solid var(--goldborder);border-radius:var(--rlg);
+  padding:1.5rem;margin-bottom:1.5rem;display:none;
+}
+.setup-banner.show{display:block}
+.setup-banner h3{font-size:14px;color:var(--gold2);margin-bottom:0.5rem}
+.setup-banner p{font-size:12px;color:var(--text2);margin-bottom:1rem}
+.setup-row{display:flex;gap:8px}
+.setup-row input{
+  flex:1;padding:9px 12px;
+  background:var(--bg3);border:1px solid var(--goldborder);
+  border-radius:var(--r);color:var(--text1);
+  font-size:12px;direction:ltr;font-family:'Tajawal',sans-serif;
+}
+
+/* ═══ METRICS ═══ */
+.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:1.75rem}
+.metric{
+  background:var(--bg2);border:1px solid var(--goldborder);
+  border-radius:var(--rlg);padding:1.25rem;
+  position:relative;overflow:hidden;
+  transition:var(--transition);
+}
+.metric::before{
+  content:'';position:absolute;top:0;right:0;
+  width:3px;height:100%;background:var(--gold);
+  opacity:0.4;
+}
+.metric:hover{border-color:var(--gold);transform:translateY(-1px)}
+.metric-label{font-size:10px;color:var(--text3);margin-bottom:8px;text-transform:uppercase;letter-spacing:1px}
+.metric-value{font-size:22px;font-weight:700;color:var(--gold2);line-height:1}
+.metric-sub{font-size:11px;color:var(--text3);margin-top:6px}
+.metric-up{color:var(--green)}
+.metric-down{color:var(--red)}
+
+/* ═══ CARD ═══ */
+.card{
+  background:var(--bg2);border:1px solid var(--goldborder);
+  border-radius:var(--rlg);overflow:hidden;margin-bottom:1rem;
+}
+.card-header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1rem 1.25rem;border-bottom:1px solid var(--goldborder);
+}
+.card-title{font-size:13px;font-weight:600;color:var(--gold2)}
+
+/* ═══ TABLE ═══ */
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{
+  padding:11px 1.25rem;text-align:right;
+  font-size:10px;font-weight:700;color:var(--text3);
+  background:var(--bg3);border-bottom:1px solid var(--goldborder);
+  white-space:nowrap;text-transform:uppercase;letter-spacing:1px;
+}
+td{
+  padding:13px 1.25rem;border-bottom:1px solid rgba(201,168,76,0.08);
+  color:var(--text1);vertical-align:middle;
+}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:var(--golddim)}
+.td-main{font-weight:600;color:var(--gold3)}
+.td-sub{font-size:11px;color:var(--text3);margin-top:2px}
+
+/* ═══ BADGES ═══ */
+.badge{
+  display:inline-block;padding:3px 10px;border-radius:20px;
+  font-size:10px;font-weight:600;white-space:nowrap;letter-spacing:0.5px;
+}
+.badge-green{background:var(--greenbg);color:var(--green);border:1px solid rgba(46,204,138,0.2)}
+.badge-red{background:var(--redbg);color:var(--red);border:1px solid rgba(224,92,92,0.2)}
+.badge-amber{background:var(--amberbg);color:var(--amber);border:1px solid rgba(224,160,64,0.2)}
+.badge-blue{background:var(--bluebg);color:var(--blue);border:1px solid rgba(92,158,224,0.2)}
+.badge-gold{background:var(--golddim);color:var(--gold2);border:1px solid var(--goldborder)}
+.badge-gray{background:rgba(107,93,74,0.15);color:var(--text2);border:1px solid rgba(107,93,74,0.2)}
+
+/* ═══ BUTTONS ═══ */
+.btn{
+  padding:9px 18px;font-size:13px;border-radius:var(--r);
+  border:1px solid var(--goldborder);background:var(--bg3);
+  color:var(--text1);cursor:pointer;transition:var(--transition);
+  font-family:'Tajawal',sans-serif;font-weight:500;
+}
+.btn:hover{background:var(--bg4);border-color:var(--gold)}
+.btn-gold{
+  background:linear-gradient(135deg,var(--gold),#a8832a);
+  color:var(--bg0);border-color:var(--gold);font-weight:700;
+}
+.btn-gold:hover{opacity:0.9;transform:translateY(-1px)}
+.btn-sm{padding:5px 12px;font-size:11px}
+.btn-danger{color:var(--red);border-color:rgba(224,92,92,0.3)}
+.btn-danger:hover{background:var(--redbg)}
+
+/* ═══ TOOLBAR ═══ */
+.toolbar{display:flex;gap:8px;margin-bottom:1rem;flex-wrap:wrap;align-items:center}
+.search-box{
+  flex:1;min-width:220px;
+  position:relative;
+}
+.search-box input{width:100%}
+.search-icon{
+  position:absolute;left:12px;top:50%;transform:translateY(-50%);
+  color:var(--text3);font-size:14px;pointer-events:none;
+}
+.toolbar input,.toolbar select{
+  padding:9px 12px;border:1px solid var(--goldborder);
+  border-radius:var(--r);background:var(--bg2);
+  color:var(--text1);font-size:13px;font-family:'Tajawal',sans-serif;
+  transition:var(--transition);
+}
+.toolbar input:focus,.toolbar select:focus{
+  outline:none;border-color:var(--gold);background:var(--bg3);
+}
+.toolbar select option{background:var(--bg2)}
+
+/* ═══ FORM ═══ */
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-group{display:flex;flex-direction:column;gap:6px}
+.form-group.full{grid-column:1/-1}
+.form-group.third{grid-column:span 1}
+.form-label{
+  font-size:10px;font-weight:700;color:var(--text3);
+  text-transform:uppercase;letter-spacing:1px;
+}
+.form-group input,.form-group select,.form-group textarea{
+  padding:10px 12px;border:1px solid var(--goldborder);
+  border-radius:var(--r);background:var(--bg3);
+  color:var(--text1);font-size:13px;font-family:'Tajawal',sans-serif;
+  transition:var(--transition);
+}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{
+  outline:none;border-color:var(--gold);background:var(--bg4);
+  box-shadow:0 0 0 3px rgba(201,168,76,0.08);
+}
+.form-group select option{background:var(--bg2)}
+.form-group textarea{resize:vertical;min-height:80px}
+.form-divider{
+  grid-column:1/-1;border:none;
+  border-top:1px solid var(--goldborder);
+  margin:4px 0;
+}
+.form-section-title{
+  grid-column:1/-1;font-size:10px;font-weight:700;
+  color:var(--gold);text-transform:uppercase;letter-spacing:2px;
+  padding-top:4px;
+}
+.calc-result{
+  background:var(--golddim);border:1px solid var(--goldborder);
+  border-radius:var(--r);padding:10px 12px;
+  color:var(--gold2);font-weight:700;font-size:15px;
+  text-align:center;
+}
+.calc-label{font-size:10px;color:var(--text3);margin-bottom:4px;text-transform:uppercase;letter-spacing:1px}
+
+/* ═══ MODAL ═══ */
+.overlay{
+  display:none;position:fixed;inset:0;
+  background:rgba(0,0,0,0.75);backdrop-filter:blur(4px);
+  z-index:200;align-items:flex-start;justify-content:center;
+  padding:2rem;overflow-y:auto;
+}
+.overlay.open{display:flex}
+.modal{
+  background:var(--bg1);border:1px solid var(--goldborder);
+  border-radius:var(--rxl);padding:2rem;
+  width:100%;max-width:680px;
+  box-shadow:0 40px 80px rgba(0,0,0,0.6);
+  margin:auto;
+}
+.modal-title{
+  font-size:18px;font-weight:700;color:var(--gold2);
+  margin-bottom:1.5rem;
+  padding-bottom:1rem;border-bottom:1px solid var(--goldborder);
+}
+.modal-footer{display:flex;gap:10px;margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--goldborder)}
+
+/* ═══ ASSET PROFILE ═══ */
+.profile-hero{
+  background:linear-gradient(135deg,var(--bg2),var(--bg3));
+  border:1px solid var(--goldborder);border-radius:var(--rxl);
+  padding:2rem;margin-bottom:1rem;position:relative;overflow:hidden;
+}
+.profile-hero::before{
+  content:'';position:absolute;top:0;right:0;
+  width:200px;height:200px;
+  background:radial-gradient(circle,rgba(201,168,76,0.06),transparent 70%);
+}
+.profile-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-top:1.5rem}
+.profile-item{padding:1rem;background:var(--bg1);border:1px solid var(--goldborder);border-radius:var(--r)}
+.profile-item-label{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin-bottom:4px}
+.profile-item-value{font-size:14px;font-weight:600;color:var(--text1)}
+
+/* ═══ UNITS SECTION ═══ */
+.units-header{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:1rem;
+}
+.units-stats{display:flex;gap:1rem;flex-wrap:wrap}
+.unit-stat{
+  background:var(--bg2);border:1px solid var(--goldborder);
+  border-radius:var(--r);padding:8px 16px;
+  text-align:center;
+}
+.unit-stat-val{font-size:18px;font-weight:700;color:var(--gold2)}
+.unit-stat-lbl{font-size:10px;color:var(--text3)}
+
+/* ═══ IMAGE UPLOAD ═══ */
+.img-upload-area{
+  border:2px dashed var(--goldborder);border-radius:var(--r);
+  padding:2rem;text-align:center;cursor:pointer;
+  transition:var(--transition);background:var(--bg3);
+}
+.img-upload-area:hover{border-color:var(--gold);background:var(--golddim)}
+.img-upload-area input{display:none}
+.img-preview{
+  display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;
+}
+.img-thumb{
+  width:80px;height:80px;border-radius:var(--r);
+  object-fit:cover;border:1px solid var(--goldborder);
+}
+
+/* ═══ SPINNER ═══ */
+.spinner{
+  display:inline-block;width:16px;height:16px;
+  border:2px solid var(--goldborder);border-top-color:var(--gold);
+  border-radius:50%;animation:spin 0.6s linear infinite;vertical-align:middle;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ═══ TOAST ═══ */
+.toast{
+  position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);
+  background:var(--bg2);border:1px solid var(--goldborder);
+  color:var(--gold2);padding:12px 24px;border-radius:var(--r);
+  font-size:13px;z-index:999;opacity:0;
+  transition:opacity 0.3s;pointer-events:none;
+  box-shadow:0 8px 32px rgba(0,0,0,0.5);
+}
+.toast.show{opacity:1}
+
+/* ═══ EMPTY ═══ */
+.empty{text-align:center;padding:4rem;color:var(--text3);font-size:13px}
+.empty-icon{font-size:40px;margin-bottom:1rem;opacity:0.3}
+
+/* ═══ PAGE ═══ */
+.page{display:none}
+.page.active{display:block;animation:fadeIn 0.3s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+/* ═══ PRIVACY MASK ═══ */
+.private{transition:filter 0.3s}
+body.masked .private{filter:blur(8px);user-select:none}
+
+/* ═══ ZAKAT ALERT ═══ */
+.zakat-alert{
+  background:linear-gradient(135deg,rgba(224,160,64,0.1),rgba(224,160,64,0.05));
+  border:1px solid rgba(224,160,64,0.3);border-radius:var(--r);
+  padding:10px 14px;font-size:12px;color:var(--amber);
+  display:flex;align-items:center;gap:8px;margin-bottom:8px;
+}
+
+/* ═══ CHARTS ═══ */
+.charts-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.chart-wrap{position:relative;height:240px;padding:1rem}
+
+/* ═══ PNL ═══ */
+.pnl-row{
+  display:flex;gap:2rem;padding:1.25rem 1.5rem;
+  background:var(--bg3);flex-wrap:wrap;
+}
+.pnl-item{display:flex;flex-direction:column;gap:4px}
+.pnl-label{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:1px}
+.pnl-value{font-size:18px;font-weight:700}
+
+/* ═══ TABS ═══ */
+.tab-bar{display:flex;gap:0;border-bottom:1px solid var(--goldborder);margin-bottom:1.5rem}
+.tab-btn{
+  padding:10px 20px;font-size:12px;cursor:pointer;
+  border:none;background:none;color:var(--text3);
+  border-bottom:2px solid transparent;
+  font-family:'Tajawal',sans-serif;font-weight:500;
+  transition:var(--transition);
+}
+.tab-btn:hover{color:var(--gold2)}
+.tab-btn.active{color:var(--gold2);border-bottom-color:var(--gold)}
+.tab-content{display:none}
+.tab-content.active{display:block}
+
+/* ═══ OWNERSHIP BADGE ═══ */
+.ownership-bar{
+  display:flex;align-items:center;gap:8px;
+  font-size:12px;color:var(--text2);
+  padding:6px 12px;background:var(--bg3);
+  border-radius:var(--r);border:1px solid var(--goldborder);
+}
+.ownership-pct{font-weight:700;color:var(--gold2);font-size:14px}
+
+/* ═══ FUTURE NOTE ═══ */
+.future-note{
+  background:linear-gradient(135deg,rgba(92,158,224,0.08),rgba(92,158,224,0.03));
+  border:1px solid rgba(92,158,224,0.2);border-radius:var(--r);
+  padding:1rem 1.25rem;
+}
+.future-note-label{font-size:10px;color:var(--blue);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.future-note-text{font-size:13px;color:var(--text2);line-height:1.7}
+
+/* ═══ MAP LINK ═══ */
+.map-link{
+  display:inline-flex;align-items:center;gap:6px;
+  color:var(--blue);font-size:12px;text-decoration:none;
+  padding:6px 12px;border:1px solid rgba(92,158,224,0.2);
+  border-radius:var(--r);background:var(--bluebg);
+  transition:var(--transition);
+}
+.map-link:hover{border-color:var(--blue);opacity:0.85}
+
+@media(max-width:768px){
+  .sidebar{display:none}
+  .main{margin-right:0;padding:1rem}
+  .charts-grid{grid-template-columns:1fr}
+  .form-grid{grid-template-columns:1fr}
+  .form-group.full{grid-column:1}
+  .profile-grid{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+<div class="layout">
+
+<!-- ══════════ SIDEBAR ══════════ -->
+<aside class="sidebar">
+  <div class="brand">
+    <div class="brand-ayah">﴿ رَبِّ إِنِّي لِمَا أَنزَلْتَ إِلَيَّ مِنْ خَيْرٍ فَقِيرٌ ﴾</div>
+    <div class="brand-name">أملاك خالد بن علي الضويان</div>
+    <div class="brand-sub">نظام إدارة الأصول العقارية</div>
+  </div>
+  <nav>
+    <div class="nav-section">
+      <div class="nav-label">الرئيسية</div>
+      <div class="nav-item active" onclick="goPage('dashboard')"><span class="nav-icon">◈</span> لوحة التحكم</div>
+      <div class="nav-item" onclick="goPage('assets')"><span class="nav-icon">⌂</span> الأصول العقارية</div>
+      <div class="nav-item" onclick="goPage('units')"><span class="nav-icon">⊞</span> الوحدات والإيجارات</div>
+    </div>
+    <div class="nav-section">
+      <div class="nav-label">العمليات</div>
+      <div class="nav-item" onclick="goPage('transactions')"><span class="nav-icon">⇄</span> البيع والشراء</div>
+      <div class="nav-item" onclick="goPage('tenants')"><span class="nav-icon">👤</span> المستأجرون</div>
+      <div class="nav-item" onclick="goPage('income')"><span class="nav-icon">↑</span> الإيرادات</div>
+      <div class="nav-item" onclick="goPage('expenses')"><span class="nav-icon">↓</span> المصاريف</div>
+    </div>
+    <div class="nav-section">
+      <div class="nav-label">التقارير</div>
+      <div class="nav-item" onclick="goPage('reports')"><span class="nav-icon">📊</span> تقارير المحفظة</div>
+      <div class="nav-item" onclick="goPage('zakat')"><span class="nav-icon">☽</span> الزكاة</div>
+    </div>
+    <div class="nav-section">
+      <div class="nav-label">الإعدادات</div>
+      <div class="nav-item" onclick="goPage('settings')"><span class="nav-icon">⚙</span> الإعدادات</div>
+    </div>
+  </nav>
+  <div class="sidebar-footer">
+    <div class="conn-badge">
+      <div class="dot" id="conn-dot"></div>
+      <span id="conn-label">غير مربوط بـ Google Sheets</span>
+    </div>
+  </div>
+</aside>
+
+<!-- ══════════ MAIN ══════════ -->
+<main class="main">
+
+<!-- Setup Banner -->
+<div class="setup-banner show" id="setup-banner">
+  <h3>⚙ إعداد الاتصال بـ Google Sheets</h3>
+  <p>الصق رابط Web App بعد نشر الـ Apps Script للحفظ التلقائي</p>
+  <div class="setup-row">
+    <input type="text" id="api-url-input" placeholder="https://script.google.com/macros/s/YOUR_ID/exec" />
+    <button class="btn btn-gold" onclick="saveApiUrl()">ربط</button>
+    <button class="btn" onclick="document.getElementById('setup-banner').classList.remove('show')">تخطي</button>
+  </div>
+</div>
+
+<!-- ══════ DASHBOARD ══════ -->
+<div class="page active" id="page-dashboard">
+  <div class="topbar">
+    <div>
+      <div class="page-title">لوحة التحكم</div>
+      <div class="page-sub" id="dash-date"></div>
+    </div>
+    <button class="privacy-btn" onclick="togglePrivacy()" id="privacy-btn">🔒 إخفاء الأرقام</button>
+  </div>
+  <div class="metrics" id="dash-metrics"></div>
+  <div class="charts-grid">
+    <div class="card"><div class="card-header"><span class="card-title">توزيع الأصول حسب النوع</span></div><div class="chart-wrap"><canvas id="typeChart"></canvas></div></div>
+    <div class="card"><div class="card-header"><span class="card-title">توزيع القيمة حسب الكيان</span></div><div class="chart-wrap"><canvas id="entityChart"></canvas></div></div>
+  </div>
+  <div id="zakat-alerts"></div>
+  <div class="card">
+    <div class="card-header"><span class="card-title">آخر الأصول المضافة</span><button class="btn btn-sm" onclick="goPage('assets')">عرض الكل</button></div>
+    <div class="table-wrap"><table id="dash-assets-table"></table></div>
+  </div>
+</div>
+
+<!-- ══════ ASSETS ══════ -->
+<div class="page" id="page-assets">
+  <div class="topbar">
+    <div><div class="page-title">الأصول العقارية</div></div>
+    <div style="display:flex;gap:8px">
+      <button class="privacy-btn" onclick="togglePrivacy()">🔒 إخفاء</button>
+      <button class="btn btn-gold" onclick="openModal('asset')">+ إضافة أصل</button>
+    </div>
+  </div>
+  <div class="toolbar">
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="asset-search" placeholder="بحث — رقم الصك، القطعة، الاسم، الحي، المستأجر..." oninput="renderAssets()" style="padding-right:36px">
+    </div>
+    <select id="asset-type-filter" onchange="renderAssets()">
+      <option value="">كل الأنواع</option>
+      <option>أرض سكنية</option><option>أرض تجارية</option><option>أرض صناعية</option>
+      <option>أرض لوجستية</option><option>أرض سكن عمال</option><option>أرض مستودع</option>
+      <option>أرض مصنع</option><option>أرض شاليه</option><option>أرض مزرعة</option>
+      <option>منزل</option><option>فيلا</option><option>شقة</option>
+      <option>عمارة سكنية</option><option>عمارة تجارية</option><option>عمارة سكن عمال</option>
+      <option>مجمع سكني</option><option>مجمع تجاري</option>
+      <option>فندق</option><option>مستودع</option><option>مصنع</option><option>شاليه</option>
+    </select>
+    <select id="asset-status-filter" onchange="renderAssets()">
+      <option value="">كل الحالات</option>
+      <option>مؤجر</option><option>شاغر</option><option>معروض للبيع</option><option>قيد التطوير</option>
+    </select>
+    <select id="asset-entity-filter" onchange="renderAssets()">
+      <option value="">كل الكيانات</option>
+    </select>
+  </div>
+  <div class="card"><div class="table-wrap"><table id="assets-table"></table></div></div>
+</div>
+
+<!-- ══════ UNITS ══════ -->
+<div class="page" id="page-units">
+  <div class="topbar">
+    <div><div class="page-title">الوحدات والإيجارات</div></div>
+    <button class="btn btn-gold" onclick="openModal('unit')">+ إضافة وحدة</button>
+  </div>
+  <div class="toolbar">
+    <input type="text" id="unit-search" placeholder="بحث..." oninput="renderUnits()">
+    <select id="unit-asset-filter" onchange="renderUnits()"><option value="">كل الأصول</option></select>
+    <select id="unit-status-filter" onchange="renderUnits()">
+      <option value="">كل الحالات</option><option>مؤجرة</option><option>شاغرة</option>
+    </select>
+  </div>
+  <div class="card"><div class="table-wrap"><table id="units-table"></table></div></div>
+</div>
+
+<!-- ══════ TRANSACTIONS ══════ -->
+<div class="page" id="page-transactions">
+  <div class="topbar">
+    <div><div class="page-title">البيع والشراء</div></div>
+    <div style="display:flex;gap:8px">
+      <button class="btn btn-gold" onclick="openModal('buy')">+ عملية شراء</button>
+      <button class="btn" onclick="openModal('sell')">+ عملية بيع</button>
+    </div>
+  </div>
+  <div class="card"><div class="table-wrap"><table id="tx-table"></table></div></div>
+</div>
+
+<!-- ══════ TENANTS ══════ -->
+<div class="page" id="page-tenants">
+  <div class="topbar">
+    <div><div class="page-title">المستأجرون</div></div>
+    <button class="btn btn-gold" onclick="openModal('tenant')">+ إضافة مستأجر</button>
+  </div>
+  <div class="card"><div class="table-wrap"><table id="tenants-table"></table></div></div>
+</div>
+
+<!-- ══════ INCOME ══════ -->
+<div class="page" id="page-income">
+  <div class="topbar">
+    <div><div class="page-title">الإيرادات</div></div>
+    <button class="btn btn-gold" onclick="openModal('income')">+ إضافة إيراد</button>
+  </div>
+  <div class="card"><div class="table-wrap"><table id="income-table"></table></div></div>
+  <div class="card" style="margin-top:1rem">
+    <div class="card-header"><span class="card-title">ملخص الإيرادات والمصاريف</span></div>
+    <div class="pnl-row" id="pnl-summary"></div>
+  </div>
+</div>
+
+<!-- ══════ EXPENSES ══════ -->
+<div class="page" id="page-expenses">
+  <div class="topbar">
+    <div><div class="page-title">المصاريف</div></div>
+    <button class="btn btn-gold" onclick="openModal('expense')">+ إضافة مصروف</button>
+  </div>
+  <div class="card"><div class="table-wrap"><table id="expenses-table"></table></div></div>
+</div>
+
+<!-- ══════ REPORTS ══════ -->
+<div class="page" id="page-reports">
+  <div class="topbar">
+    <div><div class="page-title">تقارير المحفظة</div></div>
+    <button class="privacy-btn" onclick="togglePrivacy()">🔒 إخفاء</button>
+  </div>
+  <div class="metrics" id="report-metrics"></div>
+  <div class="card">
+    <div class="card-header"><span class="card-title">أداء كل أصل</span></div>
+    <div class="table-wrap"><table id="report-table"></table></div>
+  </div>
+</div>
+
+<!-- ══════ ZAKAT ══════ -->
+<div class="page" id="page-zakat">
+  <div class="topbar">
+    <div><div class="page-title">الزكاة — عروض التجارة</div></div>
+    <button class="privacy-btn" onclick="togglePrivacy()">🔒 إخفاء</button>
+  </div>
+  <div class="metrics" id="zakat-metrics"></div>
+  <div class="card"><div class="table-wrap"><table id="zakat-table"></table></div></div>
+</div>
+
+<!-- ══════ SETTINGS ══════ -->
+<div class="page" id="page-settings">
+  <div class="topbar"><div><div class="page-title">الإعدادات</div></div></div>
+  <div class="card" style="max-width:560px">
+    <div class="card-header"><span class="card-title">إعداد Google Sheets API</span></div>
+    <div style="padding:1.5rem">
+      <div class="form-group" style="margin-bottom:1rem">
+        <div class="form-label">رابط الـ Web App</div>
+        <input type="text" id="settings-api-url" placeholder="https://script.google.com/macros/s/.../exec" style="width:100%;direction:ltr">
+      </div>
+      <button class="btn btn-gold" onclick="saveApiFromSettings()">حفظ الاتصال</button>
+    </div>
+  </div>
+</div>
+
+</main>
+</div>
+
+<!-- ══════════ MODAL ══════════ -->
+<div class="overlay" id="overlay" onclick="overlayClick(event)">
+  <div class="modal" id="modal-box">
+    <div class="modal-title" id="modal-title"></div>
+    <div id="modal-body"></div>
+    <div class="modal-footer">
+      <button class="btn btn-gold" id="modal-save-btn" onclick="saveModal()">حفظ</button>
+      <button class="btn" onclick="closeModal()">إلغاء</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+// ══════════════════════════════════════════
+// STATE
+// ══════════════════════════════════════════
+let API_URL = localStorage.getItem('amlak_api') || '';
+let MASKED = false;
+let currentPage = 'dashboard';
+let currentModal = null;
+let editId = null;
+let typeChart = null, entityChart = null;
+
+let DB = {
+  assets: [],
+  units: [],
+  tenants: [],
+  transactions: [],
+  income: [],
+  expenses: [],
+  nextId: {assets:1,units:1,tenants:1,transactions:1,income:1,expenses:1}
+};
+
+// Sample data
+DB.assets = [
+  {id:1,name:'أرض حي النخيل',type:'أرض سكنية',city:'الرياض',district:'النخيل',deed_no:'1234567890',plot_no:'521',area:900,price_m2:3500,value:3150000,status:'معروض للبيع',entity:'خالد بن علي الضويان',ownership_pct:100,purchase_date:'2019-03-15',purchase_price:2200000,actual_structure:'أرض',management:'المالك مباشرة',management_company:'',management_fee:0,for_sale:true,zakat_start:'2019-03-15',future_plan:'البيع عند ارتفاع المنطقة لـ 4500 ريال للمتر',map_url:'',images:[],notes:'موقع مميز على شارع 60م'},
+  {id:2,name:'عمارة طريق الملك فهد',type:'عمارة تجارية',city:'الرياض',district:'العليا',deed_no:'9876543210',plot_no:'88',area:600,price_m2:12000,value:7200000,status:'مؤجر',entity:'شركة الضويان للتطوير',ownership_pct:75,purchase_date:'2015-06-01',purchase_price:4500000,actual_structure:'مبنى قائم',building_type:'عمارة تجارية',floors:6,build_year:2010,building_condition:'جيد',management:'جهة خارجية',management_company:'مكتب الأمانة للإدارة',management_contact:'أحمد السالم',management_phone:'0501234567',management_fee:5,for_sale:false,zakat_start:'',future_plan:'الاحتفاظ وإعادة تأجير بعقود طويلة',map_url:'https://maps.google.com',images:[],notes:''},
+  {id:3,name:'أرض صناعية جدة',type:'أرض صناعية',city:'جدة',district:'المنطقة الصناعية الثانية',deed_no:'5544332211',plot_no:'304',area:2500,price_m2:1800,value:4500000,status:'شاغر',entity:'خالد بن علي الضويان',ownership_pct:50,purchase_date:'2020-11-20',purchase_price:3800000,actual_structure:'أرض',management:'المالك مباشرة',management_company:'',management_fee:0,for_sale:true,zakat_start:'2020-11-20',future_plan:'إنشاء مستودع وتأجيره',map_url:'',images:[],notes:'ملكية مشاعة مع شريك'},
+];
+DB.units = [
+  {id:1,asset_id:2,unit_no:'101',floor:'1',type:'محل تجاري',area:120,status:'مؤجرة',electricity_acct:'5501234567',water_acct:'4401234567',notes:''},
+  {id:2,asset_id:2,unit_no:'201',floor:'2',type:'مكتب',area:180,status:'مؤجرة',electricity_acct:'5507654321',water_acct:'4407654321',notes:''},
+  {id:3,asset_id:2,unit_no:'301',floor:'3',type:'مكتب',area:180,status:'شاغرة',electricity_acct:'5509876543',water_acct:'4409876543',notes:''},
+];
+DB.tenants = [
+  {id:1,name:'شركة النور التجارية',unit_id:1,asset_id:2,rent:18000,payment_method:'شيكات',payments_count:2,start:'2024-01-01',end:'2025-01-01',status:'نشط',phone:'0112345678',notes:''},
+  {id:2,name:'مكتب المستقبل',unit_id:2,asset_id:2,rent:22000,payment_method:'تحويل',payments_count:1,start:'2024-03-01',end:'2025-03-01',status:'نشط',phone:'0507654321',notes:''},
+];
+DB.transactions = [
+  {id:1,type:'شراء',asset_id:2,asset_name:'عمارة طريق الملك فهد',price:4500000,tax_pct:5,tax_amount:225000,brokerage_pct:2.5,brokerage_amount:112500,total_cost:4837500,brokers:'محمد العمري',date:'2015-06-01',notes:''},
+];
+DB.income = [
+  {id:1,asset_id:2,type:'إيجار',amount:18000,date:'2025-03-01',desc:'إيجار مارس - شركة النور'},
+  {id:2,asset_id:2,type:'إيجار',amount:22000,date:'2025-03-01',desc:'إيجار مارس - مكتب المستقبل'},
+];
+DB.expenses = [
+  {id:1,asset_id:2,type:'صيانة',amount:8500,date:'2025-02-10',desc:'صيانة مكيفات الدور الأول'},
+];
+DB.nextId = {assets:4,units:4,tenants:3,transactions:2,income:3,expenses:2};
+
+// ══════════════════════════════════════════
+// INIT
+// ══════════════════════════════════════════
+document.getElementById('dash-date').textContent = new Date().toLocaleDateString('ar-SA',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+
+if(API_URL){
+  document.getElementById('setup-banner').classList.remove('show');
+  document.getElementById('settings-api-url').value = API_URL;
+  setConnected(true);
+  loadAll();
+} else {
+  renderCurrentPage();
+}
+
+// ══════════════════════════════════════════
+// API
+// ══════════════════════════════════════════
+function saveApiUrl(){
+  const val = document.getElementById('api-url-input').value.trim();
+  if(!val) return toast('أدخل الرابط');
+  API_URL = val;
+  localStorage.setItem('amlak_api',val);
+  document.getElementById('setup-banner').classList.remove('show');
+  setConnected(true);
+  toast('تم الربط بـ Google Sheets');
+  loadAll();
+}
+function saveApiFromSettings(){
+  const val = document.getElementById('settings-api-url').value.trim();
+  if(!val) return toast('أدخل الرابط');
+  API_URL = val;
+  localStorage.setItem('amlak_api',val);
+  setConnected(true);
+  toast('تم حفظ الاتصال');
+}
+function setConnected(ok){
+  document.getElementById('conn-dot').className='dot'+(ok?' on':'');
+  document.getElementById('conn-label').textContent=ok?'مربوط بـ Google Sheets':'غير مربوط';
+}
+async function loadAll(){
+  // Placeholder for Google Sheets integration
+  renderCurrentPage();
+}
+async function apiPost(body){
+  if(!API_URL) return null;
+  try{
+    const res = await fetch(API_URL,{method:'POST',body:JSON.stringify(body)});
+    return await res.json();
+  }catch(e){return null}
+}
+
+// ══════════════════════════════════════════
+// NAVIGATION
+// ══════════════════════════════════════════
+function goPage(page){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
+  document.getElementById('page-'+page).classList.add('active');
+  const pages=['dashboard','assets','units','transactions','tenants','income','expenses','reports','zakat','settings'];
+  const idx=pages.indexOf(page);
+  document.querySelectorAll('.nav-item')[idx]?.classList.add('active');
+  currentPage=page;
+  renderCurrentPage();
+  updateFilters();
+}
+function renderCurrentPage(){
+  if(currentPage==='dashboard') renderDashboard();
+  if(currentPage==='assets') renderAssets();
+  if(currentPage==='units') renderUnits();
+  if(currentPage==='transactions') renderTransactions();
+  if(currentPage==='tenants') renderTenants();
+  if(currentPage==='income') renderIncome();
+  if(currentPage==='expenses') renderExpenses();
+  if(currentPage==='reports') renderReports();
+  if(currentPage==='zakat') renderZakat();
+}
+
+// ══════════════════════════════════════════
+// PRIVACY
+// ══════════════════════════════════════════
+function togglePrivacy(){
+  MASKED=!MASKED;
+  document.body.classList.toggle('masked',MASKED);
+  document.querySelectorAll('.privacy-btn').forEach(b=>{
+    b.textContent=MASKED?'🔓 إظهار الأرقام':'🔒 إخفاء الأرقام';
+  });
+}
+
+// ══════════════════════════════════════════
+// HELPERS
+// ══════════════════════════════════════════
+function fmt(n){return Math.round(n||0).toLocaleString('ar-SA')}
+function fmtM(n){
+  const v=Math.round(n||0);
+  if(v>=1000000) return (v/1000000).toFixed(2)+' م';
+  if(v>=1000) return (v/1000).toFixed(0)+' ألف';
+  return v.toLocaleString('ar-SA');
+}
+function getAssetName(id){const a=DB.assets.find(a=>a.id==id);return a?a.name:'-'}
+function getUnitLabel(id){const u=DB.units.find(u=>u.id==id);return u?`وحدة ${u.unit_no}`:'-'}
+function statusBadge(s){
+  const m={'مؤجر':'green','مؤجرة':'green','نشط':'green','شاغر':'amber','شاغرة':'amber','معروض للبيع':'blue','قيد التطوير':'gold','منتهي':'red','شراء':'blue','بيع':'green'};
+  return `<span class="badge badge-${m[s]||'gray'}">${s}</span>`;
+}
+function assetAge(dateStr){
+  if(!dateStr) return '-';
+  const diff=Date.now()-new Date(dateStr).getTime();
+  const years=Math.floor(diff/(1000*60*60*24*365));
+  const months=Math.floor((diff%(1000*60*60*24*365))/(1000*60*60*24*30));
+  if(years===0) return `${months} شهر`;
+  if(months===0) return `${years} سنة`;
+  return `${years} سنة و ${months} شهر`;
+}
+function zakatDaysLeft(startDate){
+  if(!startDate) return null;
+  const start=new Date(startDate);
+  const haulEnd=new Date(start.getTime()+365*24*60*60*1000);
+  const today=new Date();
+  const diff=Math.ceil((haulEnd-today)/(1000*60*60*24));
+  return diff;
+}
+function ownerValue(asset){
+  return (asset.value||0)*(asset.ownership_pct||100)/100;
+}
+function totalCost(asset){
+  return (asset.purchase_price||0)*(1+(asset.tax_pct||0)/100)+(asset.brokerage_cost||0);
+}
+
+function assetOptions(selected){
+  return DB.assets.map(a=>`<option value="${a.id}" ${a.id==selected?'selected':''}>${a.name}</option>`).join('');
+}
+function unitOptions(assetId,selected){
+  return DB.units.filter(u=>!assetId||u.asset_id==assetId).map(u=>`<option value="${u.id}" ${u.id==selected?'selected':''}>${u.unit_no} - ${u.type}</option>`).join('');
+}
+
+function updateFilters(){
+  // Entity filter
+  const ef=document.getElementById('asset-entity-filter');
+  if(ef){
+    const entities=[...new Set(DB.assets.map(a=>a.entity).filter(Boolean))];
+    ef.innerHTML='<option value="">كل الكيانات</option>'+entities.map(e=>`<option>${e}</option>`).join('');
+  }
+  // Unit asset filter
+  const uaf=document.getElementById('unit-asset-filter');
+  if(uaf){
+    uaf.innerHTML='<option value="">كل الأصول</option>'+DB.assets.map(a=>`<option value="${a.id}">${a.name}</option>`).join('');
+  }
+}
+
+// ══════════════════════════════════════════
+// DASHBOARD
+// ══════════════════════════════════════════
+function renderDashboard(){
+  const totalValue=DB.assets.reduce((s,a)=>s+(a.value||0),0);
+  const ownerTotal=DB.assets.reduce((s,a)=>s+ownerValue(a),0);
+  const monthlyRent=DB.tenants.filter(t=>t.status==='نشط').reduce((s,t)=>s+(t.rent||0),0);
+  const totalIncome=DB.income.reduce((s,e)=>s+(e.amount||0),0);
+  const totalExp=DB.expenses.reduce((s,e)=>s+(e.amount||0),0);
+  const net=totalIncome-totalExp;
+  const occupied=DB.assets.filter(a=>a.status==='مؤجر').length;
+  const forSale=DB.assets.filter(a=>a.for_sale).length;
+  const zakatDue=DB.assets.filter(a=>{
+    if(!a.for_sale) return false;
+    const d=zakatDaysLeft(a.zakat_start);
+    return d!==null && d<=0;
+  });
+  const zakatTotal=zakatDue.reduce((s,a)=>s+(a.value||0)*0.025,0);
+
+  document.getElementById('dash-metrics').innerHTML=`
+    <div class="metric"><div class="metric-label">إجمالي قيمة الأصول</div><div class="metric-value private">${fmtM(totalValue)}</div><div class="metric-sub">ريال سعودي</div></div>
+    <div class="metric"><div class="metric-label">حصة المالك</div><div class="metric-value private">${fmtM(ownerTotal)}</div><div class="metric-sub">بعد احتساب نسب الملكية</div></div>
+    <div class="metric"><div class="metric-label">الإيجار الشهري</div><div class="metric-value private">${fmtM(monthlyRent)}</div><div class="metric-sub metric-up">${DB.tenants.filter(t=>t.status==='نشط').length} عقد نشط</div></div>
+    <div class="metric"><div class="metric-label">صافي الأرباح</div><div class="metric-value private">${fmtM(net)}</div><div class="metric-sub ${net>=0?'metric-up':'metric-down'}">${net>=0?'ربح':'خسارة'}</div></div>
+    <div class="metric"><div class="metric-label">عدد الأصول</div><div class="metric-value">${DB.assets.length}</div><div class="metric-sub">${occupied} مؤجر · ${DB.assets.length-occupied} شاغر</div></div>
+    <div class="metric"><div class="metric-label">معروض للبيع</div><div class="metric-value">${forSale}</div><div class="metric-sub">أصل</div></div>
+    ${zakatTotal>0?`<div class="metric" style="border-color:rgba(224,160,64,0.4)"><div class="metric-label" style="color:var(--amber)">زكاة مستحقة</div><div class="metric-value private" style="color:var(--amber)">${fmtM(zakatTotal)}</div><div class="metric-sub">على ${zakatDue.length} أصل</div></div>`:''}
+  `;
+
+  // Zakat alerts
+  const alerts=DB.assets.filter(a=>{
+    if(!a.for_sale) return false;
+    const d=zakatDaysLeft(a.zakat_start);
+    return d!==null && d>0 && d<=30;
+  });
+  document.getElementById('zakat-alerts').innerHTML=alerts.map(a=>`
+    <div class="zakat-alert">⚠ اقترب حلول الحول على <strong>${a.name}</strong> — ${zakatDaysLeft(a.zakat_start)} يوم متبقي. يُنصح بتحديث سعر المتر قبل الحول.</div>
+  `).join('');
+
+  // Charts
+  const typeCounts={};
+  DB.assets.forEach(a=>typeCounts[a.type]=(typeCounts[a.type]||0)+1);
+  const entityValues={};
+  DB.assets.forEach(a=>entityValues[a.entity]=(entityValues[a.entity]||0)+ownerValue(a));
+
+  const colors=['#c9a84c','#e8c97a','#2ecc8a','#5c9ee0','#e05c5c','#e0a040','#a084cc','#5cb8c9'];
+
+  if(typeChart) typeChart.destroy();
+  if(Object.keys(typeCounts).length){
+    typeChart=new Chart(document.getElementById('typeChart'),{
+      type:'doughnut',
+      data:{labels:Object.keys(typeCounts),datasets:[{data:Object.values(typeCounts),backgroundColor:colors,borderWidth:0,hoverOffset:6}]},
+      options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#a89880',font:{size:11},boxWidth:10,padding:8}}}}
+    });
+  }
+  if(entityChart) entityChart.destroy();
+  if(Object.keys(entityValues).length){
+    entityChart=new Chart(document.getElementById('entityChart'),{
+      type:'bar',
+      data:{labels:Object.keys(entityValues),datasets:[{data:Object.values(entityValues),backgroundColor:colors,borderRadius:4,borderWidth:0}]},
+      options:{
+        responsive:true,maintainAspectRatio:false,
+        plugins:{legend:{display:false}},
+        scales:{
+          x:{ticks:{color:'#a89880',font:{size:10}},grid:{display:false}},
+          y:{ticks:{color:'#a89880',font:{size:10},callback:v=>fmtM(v)},grid:{color:'rgba(201,168,76,0.08)'}}
+        }
+      }
+    });
+  }
+
+  // Recent assets table
+  const t=document.getElementById('dash-assets-table');
+  if(!DB.assets.length){t.innerHTML='<tr><td class="empty">لا توجد أصول</td></tr>';return}
+  t.innerHTML=`<thead><tr><th>الأصل</th><th>النوع</th><th>المدينة / الحي</th><th>القيمة الكلية</th><th>حصة المالك</th><th>الحالة</th></tr></thead>
+  <tbody>${DB.assets.slice(0,5).map(a=>`<tr>
+    <td class="td-main">${a.name}</td><td>${a.type}</td>
+    <td>${a.city||'-'} / ${a.district||'-'}</td>
+    <td class="private">${fmt(a.value)} ر.س</td>
+    <td class="private">${fmt(ownerValue(a))} ر.س <span style="font-size:10px;color:var(--text3)">(${a.ownership_pct}%)</span></td>
+    <td>${statusBadge(a.status)}</td>
+  </tr>`).join('')}</tbody>`;
+}
+
+// ══════════════════════════════════════════
+// ASSETS
+// ══════════════════════════════════════════
+function renderAssets(){
+  const search=(document.getElementById('asset-search')?.value||'').toLowerCase();
+  const tf=document.getElementById('asset-type-filter')?.value||'';
+  const sf=document.getElementById('asset-status-filter')?.value||'';
+  const ef=document.getElementById('asset-entity-filter')?.value||'';
+
+  let data=DB.assets.filter(a=>{
+    const searchIn=[a.name,a.deed_no,a.plot_no,a.district,a.city,a.entity,a.notes,
+      ...DB.tenants.filter(t=>t.asset_id===a.id).map(t=>t.name)].join(' ').toLowerCase();
+    return (!search||searchIn.includes(search))&&(!tf||a.type===tf)&&(!sf||a.status===sf)&&(!ef||a.entity===ef);
+  });
+
+  const t=document.getElementById('assets-table');
+  if(!data.length){t.innerHTML=`<tr><td colspan="9" class="empty"><div class="empty-icon">⌂</div>لا توجد أصول</td></tr>`;return}
+  t.innerHTML=`<thead><tr><th>اسم الأصل</th><th>النوع</th><th>المدينة / الحي</th><th>رقم الصك</th><th>المساحة</th><th>القيمة السوقية</th><th>حصة المالك</th><th>الحالة</th><th></th></tr></thead>
+  <tbody>${data.map(a=>`<tr>
+    <td><div class="td-main">${a.name}</div><div class="td-sub">${a.entity} · ${a.ownership_pct}%</div></td>
+    <td><span style="font-size:12px">${a.type}</span></td>
+    <td>${a.city||'-'}<br><span class="td-sub">${a.district||''}</span></td>
+    <td><span style="direction:ltr;display:inline-block;font-size:12px">${a.deed_no||'-'}</span></td>
+    <td>${fmt(a.area)} م²</td>
+    <td class="private">${fmt(a.value)} ر.س<br><span class="td-sub">${fmt(a.price_m2)} ر.س/م²</span></td>
+    <td class="private">${fmt(ownerValue(a))} ر.س</td>
+    <td>${statusBadge(a.status)}</td>
+    <td><div class="row-actions" style="display:flex;gap:4px">
+      <button class="btn btn-sm" onclick="openAssetProfile(${a.id})">تفاصيل</button>
+      <button class="btn btn-sm" onclick="openModal('asset',${a.id})">تعديل</button>
+      <button class="btn btn-sm btn-danger" onclick="deleteRecord('assets',${a.id})">حذف</button>
+    </div></td>
+  </tr>`).join('')}</tbody>`;
+}
+
+// ══════════════════════════════════════════
+// ASSET PROFILE MODAL
+// ══════════════════════════════════════════
+function openAssetProfile(id){
+  const a=DB.assets.find(x=>x.id===id);
+  if(!a) return;
+  const units=DB.units.filter(u=>u.asset_id===id);
+  const tenants=DB.tenants.filter(t=>t.asset_id===id);
+  const income=DB.income.filter(i=>i.asset_id===id);
+  const expenses=DB.expenses.filter(e=>e.asset_id===id);
+  const totalIncome=income.reduce((s,i)=>s+i.amount,0);
+  const totalExp=expenses.reduce((s,e)=>s+e.amount,0);
+  const capitalGain=(a.value||0)-(a.purchase_price||0);
+  const daysLeft=zakatDaysLeft(a.zakat_start);
+
+  document.getElementById('modal-title').innerHTML=`<span style="color:var(--gold2)">${a.name}</span> <span class="badge badge-gold" style="font-size:11px;margin-right:8px">${a.type}</span>`;
+  document.getElementById('modal-body').innerHTML=`
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchProfileTab(this,'pt-overview')">نظرة عامة</button>
+      <button class="tab-btn" onclick="switchProfileTab(this,'pt-financial')">المالية</button>
+      ${units.length||['عمارة سكنية','عمارة تجارية','عمارة سكن عمال','مجمع سكني','مجمع تجاري'].includes(a.type)?`<button class="tab-btn" onclick="switchProfileTab(this,'pt-units')">الوحدات (${units.length})</button>`:''}
+      <button class="tab-btn" onclick="switchProfileTab(this,'pt-docs')">وثائق ومرفقات</button>
+    </div>
+
+    <div class="tab-content active" id="pt-overview">
+      <div class="profile-grid" style="margin-bottom:1rem">
+        <div class="profile-item"><div class="profile-item-label">المدينة</div><div class="profile-item-value">${a.city||'-'}</div></div>
+        <div class="profile-item"><div class="profile-item-label">الحي</div><div class="profile-item-value">${a.district||'-'}</div></div>
+        <div class="profile-item"><div class="profile-item-label">المساحة</div><div class="profile-item-value">${fmt(a.area)} م²</div></div>
+        <div class="profile-item"><div class="profile-item-label">رقم الصك</div><div class="profile-item-value" style="direction:ltr">${a.deed_no||'-'}</div></div>
+        <div class="profile-item"><div class="profile-item-label">رقم القطعة</div><div class="profile-item-value" style="direction:ltr">${a.plot_no||'-'}</div></div>
+        <div class="profile-item"><div class="profile-item-label">عمر الأصل</div><div class="profile-item-value">${assetAge(a.purchase_date)}</div></div>
+        <div class="profile-item"><div class="profile-item-label">الكيان المالك</div><div class="profile-item-value">${a.entity||'-'}</div></div>
+        <div class="profile-item"><div class="profile-item-label">نسبة الملكية</div><div class="profile-item-value">${a.ownership_pct||100}%</div></div>
+        <div class="profile-item"><div class="profile-item-label">طبيعة الأصل</div><div class="profile-item-value">${a.actual_structure||'-'}${a.actual_structure==='مبنى قائم'?` — ${a.building_type||''}`:''}</div></div>
+        <div class="profile-item"><div class="profile-item-label">جهة الإدارة</div><div class="profile-item-value">${a.management||'-'}${a.management==='جهة خارجية'?`<br><span style="font-size:11px;color:var(--text3)">${a.management_company||''}</span>`:''}</div></div>
+        <div class="profile-item"><div class="profile-item-label">الحالة</div><div class="profile-item-value">${statusBadge(a.status)}</div></div>
+        <div class="profile-item"><div class="profile-item-label">معروض للبيع</div><div class="profile-item-value">${a.for_sale?'<span style="color:var(--blue)">نعم</span>':'<span style="color:var(--text3)">لا</span>'}</div></div>
+      </div>
+      ${a.future_plan?`<div class="future-note"><div class="future-note-label">التوجه المستقبلي</div><div class="future-note-text">${a.future_plan}</div></div>`:''}
+      ${a.notes?`<div style="margin-top:1rem;padding:1rem;background:var(--bg3);border-radius:var(--r);font-size:13px;color:var(--text2)">${a.notes}</div>`:''}
+      ${a.map_url?`<div style="margin-top:1rem"><a href="${a.map_url}" target="_blank" class="map-link">📍 عرض الموقع على خرائط قوقل</a></div>`:''}
+      ${daysLeft!==null&&a.for_sale?`<div style="margin-top:1rem" class="zakat-alert">${daysLeft<=0?`⚠ حال الحول — الزكاة المستحقة: ${fmt((a.value||0)*0.025)} ر.س`:`☽ ${daysLeft} يوم متبقي على حلول الحول`}</div>`:''}
+    </div>
+
+    <div class="tab-content" id="pt-financial">
+      <div class="profile-grid" style="margin-bottom:1rem">
+        <div class="profile-item"><div class="profile-item-label">سعر الشراء</div><div class="profile-item-value private">${fmt(a.purchase_price)} ر.س</div></div>
+        <div class="profile-item"><div class="profile-item-label">سعر المتر الحالي</div><div class="profile-item-value private">${fmt(a.price_m2)} ر.س</div></div>
+        <div class="profile-item"><div class="profile-item-label">القيمة السوقية</div><div class="profile-item-value private" style="color:var(--gold2)">${fmt(a.value)} ر.س</div></div>
+        <div class="profile-item"><div class="profile-item-label">حصة المالك</div><div class="profile-item-value private" style="color:var(--gold2)">${fmt(ownerValue(a))} ر.س</div></div>
+        <div class="profile-item"><div class="profile-item-label">الربح الرأسمالي</div><div class="profile-item-value private" style="color:${capitalGain>=0?'var(--green)':'var(--red)'}">${capitalGain>=0?'+':''}${fmt(capitalGain)} ر.س</div></div>
+        <div class="profile-item"><div class="profile-item-label">نسبة الربح</div><div class="profile-item-value" style="color:${capitalGain>=0?'var(--green)':'var(--red)'}">${a.purchase_price?(capitalGain/a.purchase_price*100).toFixed(1):0}%</div></div>
+        <div class="profile-item"><div class="profile-item-label">إجمالي الإيرادات</div><div class="profile-item-value private">${fmt(totalIncome)} ر.س</div></div>
+        <div class="profile-item"><div class="profile-item-label">إجمالي المصاريف</div><div class="profile-item-value private">${fmt(totalExp)} ر.س</div></div>
+        <div class="profile-item"><div class="profile-item-label">صافي الدخل</div><div class="profile-item-value private" style="color:${totalIncome-totalExp>=0?'var(--green)':'var(--red)'}">${fmt(totalIncome-totalExp)} ر.س</div></div>
+      </div>
+      ${tenants.length?`<div style="margin-top:1rem"><div class="form-label" style="margin-bottom:8px">المستأجرون</div>
+        ${tenants.map(t=>`<div style="display:flex;justify-content:space-between;align-items:center;padding:10px;background:var(--bg3);border-radius:var(--r);margin-bottom:6px;font-size:13px">
+          <span style="color:var(--text1)">${t.name}</span>
+          <span class="private" style="color:var(--gold2);font-weight:600">${fmt(t.rent)} ر.س/شهر</span>
+          <span class="badge badge-${t.status==='نشط'?'green':'red'}">${t.status}</span>
+        </div>`).join('')}
+      </div>`:''}
+    </div>
+
+    ${units.length||['عمارة سكنية','عمارة تجارية','عمارة سكن عمال','مجمع سكني','مجمع تجاري'].includes(a.type)?`
+    <div class="tab-content" id="pt-units">
+      <div class="units-header">
+        <div class="units-stats">
+          <div class="unit-stat"><div class="unit-stat-val">${units.length}</div><div class="unit-stat-lbl">إجمالي</div></div>
+          <div class="unit-stat" style="border-color:rgba(46,204,138,0.3)"><div class="unit-stat-val" style="color:var(--green)">${units.filter(u=>u.status==='مؤجرة').length}</div><div class="unit-stat-lbl">مؤجرة</div></div>
+          <div class="unit-stat" style="border-color:rgba(224,160,64,0.3)"><div class="unit-stat-val" style="color:var(--amber)">${units.filter(u=>u.status==='شاغرة').length}</div><div class="unit-stat-lbl">شاغرة</div></div>
+          <div class="unit-stat"><div class="unit-stat-val">${units.length?Math.round(units.filter(u=>u.status==='مؤجرة').length/units.length*100):0}%</div><div class="unit-stat-lbl">نسبة الإشغال</div></div>
+        </div>
+        <button class="btn btn-sm btn-gold" onclick="closeModal();openModal('unit',null,${a.id})">+ وحدة جديدة</button>
+      </div>
+      <table style="width:100%;border-collapse:collapse;font-size:12px">
+        <thead><tr>
+          <th style="padding:8px;text-align:right;background:var(--bg3);color:var(--text3);border-bottom:1px solid var(--goldborder)">رقم الوحدة</th>
+          <th style="padding:8px;text-align:right;background:var(--bg3);color:var(--text3);border-bottom:1px solid var(--goldborder)">الدور</th>
+          <th style="padding:8px;text-align:right;background:var(--bg3);color:var(--text3);border-bottom:1px solid var(--goldborder)">النوع</th>
+          <th style="padding:8px;text-align:right;background:var(--bg3);color:var(--text3);border-bottom:1px solid var(--goldborder)">المساحة</th>
+          <th style="padding:8px;text-align:right;background:var(--bg3);color:var(--text3);border-bottom:1px solid var(--goldborder)">عداد الكهرباء</th>
+          <th style="padding:8px;text-align:right;background:var(--bg3);color:var(--text3);border-bottom:1px solid var(--goldborder)">عداد الماء</th>
+          <th style="padding:8px;text-align:right;background:var(--bg3);color:var(--text3);border-bottom:1px solid var(--goldborder)">الحالة</th>
+        </tr></thead>
+        <tbody>${units.sort((a,b)=>a.floor-b.floor).map(u=>{
+          const tenant=DB.tenants.find(t=>t.unit_id===u.id&&t.status==='نشط');
+          return`<tr>
+            <td style="padding:8px;border-bottom:1px solid rgba(201,168,76,0.08);font-weight:600;color:var(--gold3)">${u.unit_no}</td>
+            <td style="padding:8px;border-bottom:1px solid rgba(201,168,76,0.08);color:var(--text2)">الدور ${u.floor}</td>
+            <td style="padding:8px;border-bottom:1px solid rgba(201,168,76,0.08)">${u.type}</td>
+            <td style="padding:8px;border-bottom:1px solid rgba(201,168,76,0.08)">${u.area} م²</td>
+            <td style="padding:8px;border-bottom:1px solid rgba(201,168,76,0.08);direction:ltr;font-size:11px;color:var(--text3)">${u.electricity_acct||'-'}</td>
+            <td style="padding:8px;border-bottom:1px solid rgba(201,168,76,0.08);direction:ltr;font-size:11px;color:var(--text3)">${u.water_acct||'-'}</td>
+            <td style="padding:8px;border-bottom:1px solid rgba(201,168,76,0.08)">${statusBadge(u.status)}${tenant?`<div style="font-size:10px;color:var(--text3);margin-top:2px">${tenant.name}</div>`:''}</td>
+          </tr>`;
+        }).join('')}</tbody>
+      </table>
+    </div>`:''}
+
+    <div class="tab-content" id="pt-docs">
+      <div style="margin-bottom:1rem">
+        <div class="form-label" style="margin-bottom:8px">صور الأصل</div>
+        <div class="img-upload-area" onclick="document.getElementById('img-file').click()">
+          <input type="file" id="img-file" multiple accept="image/*" onchange="previewImages(this)">
+          <div style="font-size:24px;margin-bottom:8px;opacity:0.4">📷</div>
+          <div style="font-size:12px;color:var(--text3)">اضغط لرفع صور الأصل</div>
+        </div>
+        <div class="img-preview" id="img-preview">${(a.images||[]).map(src=>`<img class="img-thumb" src="${src}">`).join('')}</div>
+      </div>
+      <div>
+        <div class="form-label" style="margin-bottom:8px">رابط الموقع على خرائط قوقل</div>
+        <div style="display:flex;gap:8px">
+          <input type="text" id="map-url-input" value="${a.map_url||''}" placeholder="https://maps.google.com/..." style="flex:1;padding:9px 12px;background:var(--bg3);border:1px solid var(--goldborder);border-radius:var(--r);color:var(--text1);font-size:12px;direction:ltr">
+          <button class="btn btn-sm btn-gold" onclick="saveMapUrl(${a.id})">حفظ</button>
+          ${a.map_url?`<a href="${a.map_url}" target="_blank" class="map-link">📍 فتح</a>`:''}
+        </div>
+      </div>
+    </div>
+  `;
+
+  document.getElementById('modal-save-btn').style.display='none';
+  document.getElementById('overlay').classList.add('open');
+}
+
+function switchProfileTab(btn,tabId){
+  btn.closest('.modal').querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  btn.closest('.modal').querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById(tabId)?.classList.add('active');
+}
+
+function saveMapUrl(id){
+  const url=document.getElementById('map-url-input').value.trim();
+  const a=DB.assets.find(x=>x.id===id);
+  if(a){a.map_url=url;toast('تم حفظ الرابط')}
+}
+
+function previewImages(input){
+  const preview=document.getElementById('img-preview');
+  Array.from(input.files).forEach(file=>{
+    const reader=new FileReader();
+    reader.onload=e=>{
+      const img=document.createElement('img');
+      img.className='img-thumb';
+      img.src=e.target.result;
+      preview.appendChild(img);
+    };
+    reader.readAsDataURL(file);
+  });
+}
+
+// ══════════════════════════════════════════
+// UNITS
+// ══════════════════════════════════════════
+function renderUnits(){
+  const search=(document.getElementById('unit-search')?.value||'').toLowerCase();
+  const af=document.getElementById('unit-asset-filter')?.value||'';
+  const sf=document.getElementById('unit-status-filter')?.value||'';
+  let data=DB.units.filter(u=>
+    (!search||u.unit_no.includes(search)||u.type.includes(search))||
+    (!af||u.asset_id==af)&&(!sf||u.status===sf)
+  );
+  const t=document.getElementById('units-table');
+  if(!data.length){t.innerHTML=`<tr><td colspan="8" class="empty">لا توجد وحدات</td></tr>`;return}
+  t.innerHTML=`<thead><tr><th>الأصل</th><th>رقم الوحدة</th><th>الدور</th><th>النوع</th><th>المساحة</th><th>الكهرباء</th><th>الماء</th><th>الحالة</th></tr></thead>
+  <tbody>${data.map(u=>{
+    const tenant=DB.tenants.find(t=>t.unit_id===u.id&&t.status==='نشط');
+    return`<tr>
+      <td>${getAssetName(u.asset_id)}</td>
+      <td class="td-main">${u.unit_no}</td>
+      <td>الدور ${u.floor}</td>
+      <td>${u.type}</td>
+      <td>${u.area} م²</td>
+      <td style="direction:ltr;font-size:12px">${u.electricity_acct||'-'}</td>
+      <td style="direction:ltr;font-size:12px">${u.water_acct||'-'}</td>
+      <td>${statusBadge(u.status)}${tenant?`<div class="td-sub">${tenant.name}</div>`:''}</td>
+    </tr>`;
+  }).join('')}</tbody>`;
+}
+
+// ══════════════════════════════════════════
+// TRANSACTIONS
+// ══════════════════════════════════════════
+function renderTransactions(){
+  const t=document.getElementById('tx-table');
+  if(!DB.transactions.length){t.innerHTML=`<tr><td colspan="8" class="empty"><div class="empty-icon">⇄</div>لا توجد عمليات بيع أو شراء</td></tr>`;return}
+  t.innerHTML=`<thead><tr><th>النوع</th><th>الأصل</th><th>السعر</th><th>الضريبة 5%</th><th>السعي</th><th>الساعي</th><th>التكلفة الكلية</th><th>التاريخ</th></tr></thead>
+  <tbody>${DB.transactions.map(tx=>`<tr>
+    <td>${statusBadge(tx.type)}</td>
+    <td class="td-main">${tx.asset_name}</td>
+    <td class="private">${fmt(tx.price)} ر.س</td>
+    <td class="private">${tx.type==='شراء'?fmt(tx.tax_amount)+' ر.س':'-'}</td>
+    <td class="private">${fmt(tx.brokerage_amount)} ر.س <span class="td-sub">(${tx.brokerage_pct}%)</span></td>
+    <td>${tx.brokers||'-'}</td>
+    <td class="private" style="color:var(--gold2);font-weight:600">${fmt(tx.total_cost)} ر.س</td>
+    <td>${tx.date||'-'}</td>
+  </tr>`).join('')}</tbody>`;
+}
+
+// ══════════════════════════════════════════
+// TENANTS
+// ══════════════════════════════════════════
+function renderTenants(){
+  const t=document.getElementById('tenants-table');
+  if(!DB.tenants.length){t.innerHTML=`<tr><td colspan="8" class="empty">لا يوجد مستأجرون</td></tr>`;return}
+  t.innerHTML=`<thead><tr><th>المستأجر</th><th>الأصل / الوحدة</th><th>الإيجار السنوي</th><th>طريقة الدفع</th><th>بداية العقد</th><th>نهاية العقد</th><th>الحالة</th><th></th></tr></thead>
+  <tbody>${DB.tenants.map(t=>`<tr>
+    <td><div class="td-main">${t.name}</div><div class="td-sub">${t.phone||''}</div></td>
+    <td>${getAssetName(t.asset_id)}<br><span class="td-sub">${getUnitLabel(t.unit_id)}</span></td>
+    <td class="private">${fmt(t.rent)} ر.س</td>
+    <td>${t.payment_method||'-'} ${t.payments_count>1?`(${t.payments_count} دفعات)`:''}</td>
+    <td>${t.start||'-'}</td>
+    <td>${t.end||'-'}</td>
+    <td>${statusBadge(t.status)}</td>
+    <td><div style="display:flex;gap:4px">
+      <button class="btn btn-sm" onclick="openModal('tenant',${t.id})">تعديل</button>
+      <button class="btn btn-sm btn-danger" onclick="deleteRecord('tenants',${t.id})">حذف</button>
+    </div></td>
+  </tr>`).join('')}</tbody>`;
+}
+
+// ══════════════════════════════════════════
+// INCOME
+// ══════════════════════════════════════════
+function renderIncome(){
+  const t=document.getElementById('income-table');
+  const data=[...DB.income].sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+  if(!data.length){t.innerHTML=`<tr><td colspan="5" class="empty">لا توجد إيرادات</td></tr>`;return}
+  const totalInc=data.reduce((s,e)=>s+e.amount,0);
+  const totalExp=DB.expenses.reduce((s,e)=>s+e.amount,0);
+  const net=totalInc-totalExp;
+  t.innerHTML=`<thead><tr><th>الأصل</th><th>النوع</th><th>المبلغ</th><th>التاريخ</th><th>الوصف</th></tr></thead>
+  <tbody>${data.map(e=>`<tr>
+    <td>${getAssetName(e.asset_id)}</td>
+    <td>${statusBadge(e.type)}</td>
+    <td class="td-main private">${fmt(e.amount)} ر.س</td>
+    <td>${e.date||'-'}</td><td>${e.desc||'-'}</td>
+  </tr>`).join('')}</tbody>`;
+  document.getElementById('pnl-summary').innerHTML=`
+    <div class="pnl-item"><div class="pnl-label">إجمالي الإيرادات</div><div class="pnl-value private" style="color:var(--green)">${fmt(totalInc)} ر.س</div></div>
+    <div class="pnl-item"><div class="pnl-label">إجمالي المصاريف</div><div class="pnl-value private" style="color:var(--red)">${fmt(totalExp)} ر.س</div></div>
+    <div class="pnl-item"><div class="pnl-label">صافي الربح</div><div class="pnl-value private" style="color:${net>=0?'var(--green)':'var(--red)'}">${fmt(net)} ر.س</div></div>
+    <div class="pnl-item"><div class="pnl-label">هامش الربح</div><div class="pnl-value">${totalInc?Math.round(net/totalInc*100):0}%</div></div>
+  `;
+}
+
+// ══════════════════════════════════════════
+// EXPENSES
+// ══════════════════════════════════════════
+function renderExpenses(){
+  const t=document.getElementById('expenses-table');
+  const data=[...DB.expenses].sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+  if(!data.length){t.innerHTML=`<tr><td colspan="5" class="empty">لا توجد مصاريف</td></tr>`;return}
+  const total=data.reduce((s,e)=>s+e.amount,0);
+  t.innerHTML=`<thead><tr><th>الأصل</th><th>النوع</th><th>المبلغ</th><th>التاريخ</th><th>الوصف</th></tr></thead>
+  <tbody>${data.map(e=>`<tr>
+    <td>${getAssetName(e.asset_id)}</td>
+    <td>${statusBadge(e.type)}</td>
+    <td class="td-main private">${fmt(e.amount)} ر.س</td>
+    <td>${e.date||'-'}</td><td>${e.desc||'-'}</td>
+  </tr>`).join('')}
+  <tr><td colspan="2" style="font-weight:600;color:var(--text3);font-size:12px;padding:10px 1.25rem">الإجمالي</td><td class="private" style="padding:10px 1.25rem;font-weight:700;color:var(--red)">${fmt(total)} ر.س</td><td colspan="2"></td></tr>
+  </tbody>`;
+}
+
+// ══════════════════════════════════════════
+// REPORTS
+// ══════════════════════════════════════════
+function renderReports(){
+  const totalValue=DB.assets.reduce((s,a)=>s+(a.value||0),0);
+  const ownerTotal=DB.assets.reduce((s,a)=>s+ownerValue(a),0);
+  const totalPurchase=DB.assets.reduce((s,a)=>s+(a.purchase_price||0),0);
+  const totalGain=totalValue-totalPurchase;
+  const totalIncome=DB.income.reduce((s,e)=>s+e.amount,0);
+  const totalExp=DB.expenses.reduce((s,e)=>s+e.amount,0);
+
+  document.getElementById('report-metrics').innerHTML=`
+    <div class="metric"><div class="metric-label">إجمالي القيمة السوقية</div><div class="metric-value private">${fmtM(totalValue)}</div><div class="metric-sub">ريال سعودي</div></div>
+    <div class="metric"><div class="metric-label">حصة المالك الكلية</div><div class="metric-value private">${fmtM(ownerTotal)}</div></div>
+    <div class="metric"><div class="metric-label">إجمالي تكلفة الشراء</div><div class="metric-value private">${fmtM(totalPurchase)}</div></div>
+    <div class="metric"><div class="metric-label">الربح الرأسمالي الكلي</div><div class="metric-value private" style="color:${totalGain>=0?'var(--green)':'var(--red)'}">${totalGain>=0?'+':''}${fmtM(totalGain)}</div></div>
+    <div class="metric"><div class="metric-label">صافي الدخل التشغيلي</div><div class="metric-value private">${fmtM(totalIncome-totalExp)}</div></div>
+  `;
+
+  const t=document.getElementById('report-table');
+  t.innerHTML=`<thead><tr><th>الأصل</th><th>النوع</th><th>الكيان</th><th>ملكية%</th><th>تكلفة الشراء</th><th>القيمة الحالية</th><th>حصة المالك</th><th>الربح الرأسمالي</th><th>نسبة العائد</th></tr></thead>
+  <tbody>${DB.assets.map(a=>{
+    const gain=(a.value||0)-(a.purchase_price||0);
+    const roi=a.purchase_price?gain/a.purchase_price*100:0;
+    return`<tr>
+      <td class="td-main">${a.name}</td>
+      <td>${a.type}</td>
+      <td style="font-size:12px">${a.entity||'-'}</td>
+      <td>${a.ownership_pct||100}%</td>
+      <td class="private">${fmt(a.purchase_price)} ر.س</td>
+      <td class="private" style="color:var(--gold2);font-weight:600">${fmt(a.value)} ر.س</td>
+      <td class="private">${fmt(ownerValue(a))} ر.س</td>
+      <td class="private" style="color:${gain>=0?'var(--green)':'var(--red)'}">${gain>=0?'+':''}${fmt(gain)} ر.س</td>
+      <td style="color:${roi>=0?'var(--green)':'var(--red)'}">${roi.toFixed(1)}%</td>
+    </tr>`;
+  }).join('')}</tbody>`;
+}
+
+// ══════════════════════════════════════════
+// ZAKAT
+// ══════════════════════════════════════════
+function renderZakat(){
+  const zakatAssets=DB.assets.filter(a=>a.for_sale);
+  const due=zakatAssets.filter(a=>zakatDaysLeft(a.zakat_start)<=0);
+  const totalZakat=due.reduce((s,a)=>s+(a.value||0)*0.025,0);
+
+  document.getElementById('zakat-metrics').innerHTML=`
+    <div class="metric"><div class="metric-label">أصول معروضة للبيع</div><div class="metric-value">${zakatAssets.length}</div></div>
+    <div class="metric"><div class="metric-label">حال الحول عليها</div><div class="metric-value" style="color:var(--amber)">${due.length}</div></div>
+    <div class="metric"><div class="metric-label">إجمالي الزكاة المستحقة</div><div class="metric-value private" style="color:var(--amber)">${fmtM(totalZakat)}</div><div class="metric-sub">2.5% من القيمة السوقية</div></div>
+  `;
+
+  const t=document.getElementById('zakat-table');
+  if(!zakatAssets.length){t.innerHTML=`<tr><td colspan="6" class="empty">لا توجد أصول معروضة للبيع</td></tr>`;return}
+  t.innerHTML=`<thead><tr><th>الأصل</th><th>تاريخ العرض للبيع</th><th>القيمة السوقية</th><th>الزكاة المستحقة</th><th>أيام متبقية للحول</th><th>الحالة</th></tr></thead>
+  <tbody>${zakatAssets.map(a=>{
+    const days=zakatDaysLeft(a.zakat_start);
+    const zakat=(a.value||0)*0.025;
+    const isDue=days<=0;
+    const isAlert=days>0&&days<=30;
+    return`<tr>
+      <td class="td-main">${a.name}</td>
+      <td>${a.zakat_start||'-'}</td>
+      <td class="private">${fmt(a.value)} ر.س</td>
+      <td class="private" style="color:${isDue?'var(--amber)':'var(--text3)'};font-weight:${isDue?700:400}">${isDue?fmt(zakat)+' ر.س':'-'}</td>
+      <td style="color:${isDue?'var(--red)':isAlert?'var(--amber)':'var(--text2)'}">${isDue?'حال الحول':days+' يوم'}</td>
+      <td>${isDue?`<span class="badge badge-amber">مستحقة</span>`:isAlert?`<span class="badge badge-gold">قريب</span>`:`<span class="badge badge-gray">لم يحل</span>`}</td>
+    </tr>`;
+  }).join('')}</tbody>`;
+}
+
+// ══════════════════════════════════════════
+// MODALS / FORMS
+// ══════════════════════════════════════════
+function v(id){const el=document.getElementById(id);return el?el.value:''}
+function calcAssetValue(){
+  const area=parseFloat(v('f-area'))||0;
+  const pm2=parseFloat(v('f-price-m2'))||0;
+  const val=Math.round(area*pm2);
+  const vi=document.getElementById('f-value');
+  if(vi&&area>0&&pm2>0) vi.value=val;
+  const vd=document.getElementById('f-value-display');
+  if(vd) vd.textContent=val>0?fmt(val)+' ر.س':'—';
+}
+function calcBuy(){
+  const price=parseFloat(v('f-price'))||0;
+  const taxPct=parseFloat(v('f-tax-pct'))||5;
+  const brkPct=parseFloat(v('f-brk-pct'))||2.5;
+  const tax=Math.round(price*taxPct/100);
+  const brk=Math.round(price*brkPct/100);
+  const total=price+tax+brk;
+  const td=document.getElementById('f-tax-display');
+  const bd=document.getElementById('f-brk-display');
+  const totd=document.getElementById('f-total-display');
+  if(td) td.textContent=fmt(tax)+' ر.س';
+  if(bd) bd.textContent=fmt(brk)+' ر.س';
+  if(totd) totd.textContent=fmt(total)+' ر.س';
+}
+function calcSell(){
+  const price=parseFloat(v('f-price'))||0;
+  const brkPct=parseFloat(v('f-brk-pct'))||2.5;
+  const brk=Math.round(price*brkPct/100);
+  const net=price-brk;
+  const bd=document.getElementById('f-brk-display');
+  const nd=document.getElementById('f-net-display');
+  if(bd) bd.textContent=fmt(brk)+' ر.س';
+  if(nd) nd.textContent=fmt(net)+' ر.س';
+}
+
+const FORMS={
+  asset:{
+    title:id=>id?'تعديل أصل عقاري':'إضافة أصل عقاري جديد',
+    html:(r={})=>`<div class="form-grid">
+      <div class="form-section-title">معلومات الأصل الأساسية</div>
+      <div class="form-group full"><div class="form-label">اسم الأصل</div><input id="f-name" value="${r.name||''}" placeholder="مثال: عمارة حي النخيل"></div>
+      <div class="form-group"><div class="form-label">نوع الأصل</div><select id="f-type">
+        <optgroup label="الأراضي">
+          ${['أرض سكنية','أرض تجارية','أرض صناعية','أرض لوجستية','أرض سكن عمال','أرض مستودع','أرض مصنع','أرض شاليه','أرض مزرعة'].map(o=>`<option ${r.type===o?'selected':''}>${o}</option>`).join('')}
+        </optgroup>
+        <optgroup label="المباني السكنية">
+          ${['منزل','فيلا','شقة','عمارة سكنية','مجمع سكني'].map(o=>`<option ${r.type===o?'selected':''}>${o}</option>`).join('')}
+        </optgroup>
+        <optgroup label="المباني التجارية">
+          ${['عمارة تجارية','مجمع تجاري','فندق','مستودع','مصنع','شاليه','عمارة سكن عمال'].map(o=>`<option ${r.type===o?'selected':''}>${o}</option>`).join('')}
+        </optgroup>
+      </select></div>
+      <div class="form-group"><div class="form-label">طبيعة الأصل الفعلية</div><select id="f-actual" onchange="toggleBuildingFields()">
+        <option ${(r.actual_structure||'')==='أرض'?'selected':''}>أرض</option>
+        <option ${(r.actual_structure||'')==='مبنى قائم'?'selected':''}>مبنى قائم</option>
+      </select></div>
+      <div id="building-fields" style="${r.actual_structure==='مبنى قائم'?'':'display:none'};grid-column:1/-1;display:${r.actual_structure==='مبنى قائم'?'grid':'none'};grid-template-columns:1fr 1fr 1fr;gap:14px">
+        <div class="form-group"><div class="form-label">نوع المبنى</div><input id="f-building-type" value="${r.building_type||''}" placeholder="عمارة / فندق / مستودع..."></div>
+        <div class="form-group"><div class="form-label">عدد الأدوار</div><input id="f-floors" type="number" value="${r.floors||''}"></div>
+        <div class="form-group"><div class="form-label">سنة البناء</div><input id="f-build-year" type="number" value="${r.build_year||''}" placeholder="2010"></div>
+        <div class="form-group"><div class="form-label">حالة المبنى</div><select id="f-condition">
+          ${['ممتاز','جيد','يحتاج صيانة','متهالك'].map(o=>`<option ${r.building_condition===o?'selected':''}>${o}</option>`).join('')}
+        </select></div>
+      </div>
+      <hr class="form-divider">
+      <div class="form-section-title">الموقع والتوثيق</div>
+      <div class="form-group"><div class="form-label">المدينة</div><input id="f-city" value="${r.city||''}" placeholder="الرياض"></div>
+      <div class="form-group"><div class="form-label">الحي</div><input id="f-district" value="${r.district||''}" placeholder="حي النخيل"></div>
+      <div class="form-group"><div class="form-label">رقم الصك</div><input id="f-deed" value="${r.deed_no||''}" placeholder="" style="direction:ltr"></div>
+      <div class="form-group"><div class="form-label">رقم القطعة</div><input id="f-plot" value="${r.plot_no||''}" placeholder="" style="direction:ltr"></div>
+      <hr class="form-divider">
+      <div class="form-section-title">التقييم المالي</div>
+      <div class="form-group"><div class="form-label">المساحة (م²)</div><input id="f-area" type="number" value="${r.area||''}" oninput="calcAssetValue()"></div>
+      <div class="form-group"><div class="form-label">سعر المتر (ر.س)</div><input id="f-price-m2" type="number" value="${r.price_m2||''}" oninput="calcAssetValue()"></div>
+      <div class="form-group full">
+        <div class="calc-label">القيمة السوقية المحسوبة</div>
+        <div class="calc-result" id="f-value-display">${r.value?fmt(r.value)+' ر.س':'أدخل المساحة وسعر المتر'}</div>
+        <input type="hidden" id="f-value" value="${r.value||0}">
+      </div>
+      <div class="form-group"><div class="form-label">سعر الشراء (ر.س)</div><input id="f-purchase-price" type="number" value="${r.purchase_price||''}"></div>
+      <div class="form-group"><div class="form-label">تاريخ الشراء</div><input id="f-purchase-date" type="date" value="${r.purchase_date||''}"></div>
+      <hr class="form-divider">
+      <div class="form-section-title">الملكية والإدارة</div>
+      <div class="form-group"><div class="form-label">الكيان المالك</div><input id="f-entity" value="${r.entity||''}" placeholder="خالد بن علي الضويان / شركة..."></div>
+      <div class="form-group"><div class="form-label">نسبة الملكية %</div><input id="f-ownership" type="number" min="1" max="100" value="${r.ownership_pct||100}"></div>
+      <div class="form-group"><div class="form-label">جهة الإدارة</div><select id="f-management" onchange="toggleManagement()">
+        <option ${(r.management||'')==='المالك مباشرة'?'selected':''}>المالك مباشرة</option>
+        <option ${(r.management||'')==='جهة خارجية'?'selected':''}>جهة خارجية</option>
+      </select></div>
+      <div class="form-group"><div class="form-label">عمولة الإدارة %</div><input id="f-mgmt-fee" type="number" value="${r.management_fee||0}" ${r.management!=='جهة خارجية'?'disabled':''}></div>
+      <div id="mgmt-fields" style="${r.management==='جهة خارجية'?'':'display:none'};grid-column:1/-1;display:${r.management==='جهة خارجية'?'grid':'none'};grid-template-columns:1fr 1fr 1fr;gap:14px">
+        <div class="form-group"><div class="form-label">اسم الشركة</div><input id="f-mgmt-company" value="${r.management_company||''}"></div>
+        <div class="form-group"><div class="form-label">اسم المسؤول</div><input id="f-mgmt-contact" value="${r.management_contact||''}"></div>
+        <div class="form-group"><div class="form-label">رقم التواصل</div><input id="f-mgmt-phone" value="${r.management_phone||''}"></div>
+      </div>
+      <hr class="form-divider">
+      <div class="form-section-title">الحالة والزكاة</div>
+      <div class="form-group"><div class="form-label">الحالة التشغيلية</div><select id="f-status">
+        ${['مؤجر','شاغر','معروض للبيع','قيد التطوير'].map(o=>`<option ${r.status===o?'selected':''}>${o}</option>`).join('')}
+      </select></div>
+      <div class="form-group"><div class="form-label">عروض التجارة (الزكاة)</div><select id="f-for-sale" onchange="toggleZakat()">
+        <option value="1" ${r.for_sale?'selected':''}>معروض للبيع — تجب الزكاة</option>
+        <option value="0" ${!r.for_sale?'selected':''}>غير معروض للبيع — لا زكاة</option>
+      </select></div>
+      <div class="form-group" id="zakat-start-group" style="${r.for_sale?'':'display:none'}">
+        <div class="form-label">تاريخ بدء حساب الحول</div>
+        <input id="f-zakat-start" type="date" value="${r.zakat_start||''}">
+      </div>
+      <hr class="form-divider">
+      <div class="form-section-title">التوجه المستقبلي والملاحظات</div>
+      <div class="form-group full"><div class="form-label">التوجه المستقبلي تجاه الأصل</div><textarea id="f-future" placeholder="مثال: مخطط البيع عند ارتفاع السعر لـ 4500 ر.س/م² — أو: تطوير وبناء عمارة سكنية">${r.future_plan||''}</textarea></div>
+      <div class="form-group full"><div class="form-label">ملاحظات</div><textarea id="f-notes">${r.notes||''}</textarea></div>
+    </div>`,
+    getData:()=>({
+      name:v('f-name'),type:v('f-type'),actual_structure:v('f-actual'),
+      building_type:v('f-building-type'),floors:+v('f-floors'),build_year:+v('f-build-year'),building_condition:v('f-condition'),
+      city:v('f-city'),district:v('f-district'),deed_no:v('f-deed'),plot_no:v('f-plot'),
+      area:+v('f-area'),price_m2:+v('f-price-m2'),value:+v('f-value'),
+      purchase_price:+v('f-purchase-price'),purchase_date:v('f-purchase-date'),
+      entity:v('f-entity'),ownership_pct:+v('f-ownership'),
+      management:v('f-management'),management_fee:+v('f-mgmt-fee'),
+      management_company:v('f-mgmt-company'),management_contact:v('f-mgmt-contact'),management_phone:v('f-mgmt-phone'),
+      status:v('f-status'),for_sale:v('f-for-sale')==='1',zakat_start:v('f-zakat-start'),
+      future_plan:v('f-future'),notes:v('f-notes'),images:[],map_url:''
+    }),
+    collection:'assets'
+  },
+
+  unit:{
+    title:id=>id?'تعديل وحدة':'إضافة وحدة',
+    html:(r={},preAsset)=>`<div class="form-grid">
+      <div class="form-group full"><div class="form-label">الأصل</div><select id="f-asset-id">${assetOptions(preAsset||r.asset_id)}</select></div>
+      <div class="form-group"><div class="form-label">رقم الوحدة</div><input id="f-unit-no" value="${r.unit_no||''}"></div>
+      <div class="form-group"><div class="form-label">الدور</div><input id="f-floor" value="${r.floor||''}"></div>
+      <div class="form-group"><div class="form-label">النوع</div><select id="f-type">
+        ${['شقة','استوديو','محل تجاري','مكتب','مستودع','غرفة','سكن عمال','أخرى'].map(o=>`<option ${r.type===o?'selected':''}>${o}</option>`).join('')}
+      </select></div>
+      <div class="form-group"><div class="form-label">المساحة (م²)</div><input id="f-area" type="number" value="${r.area||''}"></div>
+      <div class="form-group"><div class="form-label">رقم حساب الكهرباء</div><input id="f-elec" value="${r.electricity_acct||''}" style="direction:ltr"></div>
+      <div class="form-group"><div class="form-label">رقم حساب الماء</div><input id="f-water" value="${r.water_acct||''}" style="direction:ltr"></div>
+      <div class="form-group"><div class="form-label">الحالة</div><select id="f-status">
+        <option ${r.status==='مؤجرة'?'selected':''}>مؤجرة</option>
+        <option ${r.status==='شاغرة'?'selected':''}>شاغرة</option>
+      </select></div>
+      <div class="form-group full"><div class="form-label">ملاحظات</div><textarea id="f-notes">${r.notes||''}</textarea></div>
+    </div>`,
+    getData:()=>({asset_id:+v('f-asset-id'),unit_no:v('f-unit-no'),floor:v('f-floor'),type:v('f-type'),area:+v('f-area'),electricity_acct:v('f-elec'),water_acct:v('f-water'),status:v('f-status'),notes:v('f-notes')}),
+    collection:'units'
+  },
+
+  tenant:{
+    title:id=>id?'تعديل مستأجر':'إضافة مستأجر',
+    html:(r={})=>`<div class="form-grid">
+      <div class="form-group full"><div class="form-label">اسم المستأجر</div><input id="f-name" value="${r.name||''}" placeholder="الاسم الكامل / اسم الشركة"></div>
+      <div class="form-group"><div class="form-label">الأصل</div><select id="f-asset-id">${assetOptions(r.asset_id)}</select></div>
+      <div class="form-group"><div class="form-label">الوحدة</div><select id="f-unit-id">${unitOptions(r.asset_id,r.unit_id)}</select></div>
+      <div class="form-group"><div class="form-label">الإيجار السنوي (ر.س)</div><input id="f-rent" type="number" value="${r.rent||''}"></div>
+      <div class="form-group"><div class="form-label">طريقة الدفع</div><select id="f-payment">
+        ${['دفعة واحدة','دفعتان','شيكات','تحويل بنكي','كاش'].map(o=>`<option ${r.payment_method===o?'selected':''}>${o}</option>`).join('')}
+      </select></div>
+      <div class="form-group"><div class="form-label">عدد الدفعات</div><input id="f-payments-count" type="number" min="1" value="${r.payments_count||1}"></div>
+      <div class="form-group"><div class="form-label">رقم الجوال</div><input id="f-phone" value="${r.phone||''}"></div>
+      <div class="form-group"><div class="form-label">تاريخ البداية</div><input id="f-start" type="date" value="${r.start||''}"></div>
+      <div class="form-group"><div class="form-label">تاريخ الانتهاء</div><input id="f-end" type="date" value="${r.end||''}"></div>
+      <div class="form-group"><div class="form-label">الحالة</div><select id="f-status">
+        <option ${r.status==='نشط'?'selected':''}>نشط</option>
+        <option ${r.status==='منتهي'?'selected':''}>منتهي</option>
+      </select></div>
+      <div class="form-group full"><div class="form-label">ملاحظات</div><textarea id="f-notes">${r.notes||''}</textarea></div>
+    </div>`,
+    getData:()=>({name:v('f-name'),asset_id:+v('f-asset-id'),unit_id:+v('f-unit-id'),rent:+v('f-rent'),payment_method:v('f-payment'),payments_count:+v('f-payments-count'),phone:v('f-phone'),start:v('f-start'),end:v('f-end'),status:v('f-status'),notes:v('f-notes')}),
+    collection:'tenants'
+  },
+
+  buy:{
+    title:()=>'تسجيل عملية شراء',
+    html:()=>`<div class="form-grid">
+      <div class="form-section-title">بيانات الأصل المشتري</div>
+      <div class="form-group full"><div class="form-label">اسم الأصل</div><input id="f-asset-name" placeholder="اسم العقار المشتري"></div>
+      <div class="form-group"><div class="form-label">سعر الشراء (ر.س)</div><input id="f-price" type="number" oninput="calcBuy()"></div>
+      <div class="form-group"><div class="form-label">تاريخ الشراء</div><input id="f-date" type="date"></div>
+      <hr class="form-divider">
+      <div class="form-section-title">التكاليف الإضافية</div>
+      <div class="form-group"><div class="form-label">ضريبة التصرفات % <span style="color:var(--text3)">(5% افتراضي)</span></div><input id="f-tax-pct" type="number" value="5" oninput="calcBuy()"></div>
+      <div class="form-group"><div class="form-label">قيمة الضريبة</div><div class="calc-result" id="f-tax-display" style="font-size:13px">—</div></div>
+      <div class="form-group"><div class="form-label">نسبة السعي % <span style="color:var(--text3)">(2.5% افتراضي)</span></div><input id="f-brk-pct" type="number" value="2.5" oninput="calcBuy()"></div>
+      <div class="form-group"><div class="form-label">قيمة السعي</div><div class="calc-result" id="f-brk-display" style="font-size:13px">—</div></div>
+      <div class="form-group full"><div class="form-label">اسم الساعي / السماسرة</div><input id="f-brokers" placeholder="يمكن إضافة أكثر من اسم"></div>
+      <div class="form-group full">
+        <div class="calc-label">التكلفة الكلية الفعلية</div>
+        <div class="calc-result" id="f-total-display">أدخل السعر لحساب التكلفة الكلية</div>
+      </div>
+      <div class="form-group full"><div class="form-label">ملاحظات</div><textarea id="f-notes" placeholder="أي تفاصيل إضافية عن الصفقة"></textarea></div>
+    </div>`,
+    getData:()=>{
+      const price=+v('f-price');const taxP=+v('f-tax-pct');const brkP=+v('f-brk-pct');
+      const tax=Math.round(price*taxP/100);const brk=Math.round(price*brkP/100);
+      return{type:'شراء',asset_name:v('f-asset-name'),price,tax_pct:taxP,tax_amount:tax,brokerage_pct:brkP,brokerage_amount:brk,total_cost:price+tax+brk,brokers:v('f-brokers'),date:v('f-date'),notes:v('f-notes')};
+    },
+    collection:'transactions'
+  },
+
+  sell:{
+    title:()=>'تسجيل عملية بيع',
+    html:()=>`<div class="form-grid">
+      <div class="form-section-title">بيانات الأصل المباع</div>
+      <div class="form-group full"><div class="form-label">الأصل</div><select id="f-asset-id">${assetOptions()}</select></div>
+      <div class="form-group"><div class="form-label">سعر البيع (ر.س)</div><input id="f-price" type="number" oninput="calcSell()"></div>
+      <div class="form-group"><div class="form-label">تاريخ البيع</div><input id="f-date" type="date"></div>
+      <hr class="form-divider">
+      <div class="form-section-title">تكاليف البيع</div>
+      <div class="form-group"><div class="form-label">نسبة السعي % <span style="color:var(--text3)">(الضريبة على المشتري)</span></div><input id="f-brk-pct" type="number" value="2.5" oninput="calcSell()"></div>
+      <div class="form-group"><div class="form-label">قيمة السعي</div><div class="calc-result" id="f-brk-display" style="font-size:13px">—</div></div>
+      <div class="form-group full"><div class="form-label">اسم الساعي / السماسرة</div><input id="f-brokers" placeholder="يمكن إضافة أكثر من اسم"></div>
+      <div class="form-group full">
+        <div class="calc-label">صافي البيع بعد السعي</div>
+        <div class="calc-result" id="f-net-display">أدخل السعر لحساب الصافي</div>
+      </div>
+      <div class="form-group full"><div class="form-label">ملاحظات</div><textarea id="f-notes"></textarea></div>
+    </div>`,
+    getData:()=>{
+      const price=+v('f-price');const brkP=+v('f-brk-pct');const brk=Math.round(price*brkP/100);
+      return{type:'بيع',asset_id:+v('f-asset-id'),asset_name:getAssetName(+v('f-asset-id')),price,brokerage_pct:brkP,brokerage_amount:brk,total_cost:price-brk,brokers:v('f-brokers'),date:v('f-date'),notes:v('f-notes')};
+    },
+    collection:'transactions'
+  },
+
+  income:{
+    title:id=>id?'تعديل إيراد':'إضافة إيراد',
+    html:(r={})=>`<div class="form-grid">
+      <div class="form-group full"><div class="form-label">الأصل</div><select id="f-asset-id">${assetOptions(r.asset_id)}</select></div>
+      <div class="form-group"><div class="form-label">النوع</div><select id="f-type">${['إيجار','بيع','عائد استثماري','أخرى'].map(o=>`<option ${r.type===o?'selected':''}>${o}</option>`).join('')}</select></div>
+      <div class="form-group"><div class="form-label">المبلغ (ر.س)</div><input id="f-amount" type="number" value="${r.amount||''}"></div>
+      <div class="form-group"><div class="form-label">التاريخ</div><input id="f-date" type="date" value="${r.date||''}"></div>
+      <div class="form-group full"><div class="form-label">الوصف</div><input id="f-desc" value="${r.desc||''}"></div>
+    </div>`,
+    getData:()=>({asset_id:+v('f-asset-id'),type:v('f-type'),amount:+v('f-amount'),date:v('f-date'),desc:v('f-desc')}),
+    collection:'income'
+  },
+
+  expense:{
+    title:id=>id?'تعديل مصروف':'إضافة مصروف',
+    html:(r={})=>`<div class="form-grid">
+      <div class="form-group full"><div class="form-label">الأصل</div><select id="f-asset-id">${assetOptions(r.asset_id)}</select></div>
+      <div class="form-group"><div class="form-label">النوع</div><select id="f-type">${['صيانة','رسوم حكومية','تأمين','عمولة إدارة','خدمات','أخرى'].map(o=>`<option ${r.type===o?'selected':''}>${o}</option>`).join('')}</select></div>
+      <div class="form-group"><div class="form-label">المبلغ (ر.س)</div><input id="f-amount" type="number" value="${r.amount||''}"></div>
+      <div class="form-group"><div class="form-label">التاريخ</div><input id="f-date" type="date" value="${r.date||''}"></div>
+      <div class="form-group full"><div class="form-label">الوصف</div><input id="f-desc" value="${r.desc||''}"></div>
+    </div>`,
+    getData:()=>({asset_id:+v('f-asset-id'),type:v('f-type'),amount:+v('f-amount'),date:v('f-date'),desc:v('f-desc')}),
+    collection:'expenses'
+  }
+};
+
+function toggleBuildingFields(){
+  const isBuilding=v('f-actual')==='مبنى قائم';
+  const bf=document.getElementById('building-fields');
+  if(bf) bf.style.display=isBuilding?'grid':'none';
+}
+function toggleManagement(){
+  const isExt=v('f-management')==='جهة خارجية';
+  const mf=document.getElementById('mgmt-fields');
+  const fee=document.getElementById('f-mgmt-fee');
+  if(mf) mf.style.display=isExt?'grid':'none';
+  if(fee) fee.disabled=!isExt;
+}
+function toggleZakat(){
+  const isForSale=v('f-for-sale')==='1';
+  const zg=document.getElementById('zakat-start-group');
+  if(zg) zg.style.display=isForSale?'':'none';
+}
+
+function openModal(type,id,preAsset){
+  currentModal=type;editId=id||null;
+  const form=FORMS[type];
+  const rec=id?DB[form.collection]?.find(r=>r.id===id):{};
+  document.getElementById('modal-title').textContent=form.title(id);
+  document.getElementById('modal-body').innerHTML=form.html(rec||{},preAsset);
+  document.getElementById('modal-save-btn').style.display='';
+  document.getElementById('overlay').classList.add('open');
+}
+function closeModal(){document.getElementById('overlay').classList.remove('open')}
+function overlayClick(e){if(e.target===document.getElementById('overlay'))closeModal()}
+
+function saveModal(){
+  const form=FORMS[currentModal];
+  if(!form) return;
+  const data=form.getData();
+  const btn=document.getElementById('modal-save-btn');
+  btn.disabled=true;btn.innerHTML='<span class="spinner"></span>';
+
+  if(editId){
+    const idx=DB[form.collection].findIndex(r=>r.id===editId);
+    if(idx!==-1) DB[form.collection][idx]={...DB[form.collection][idx],...data};
+    toast('تم التحديث');
+  } else {
+    data.id=DB.nextId[form.collection]++;
+    DB[form.collection].push(data);
+    toast('تمت الإضافة');
+  }
+
+  btn.disabled=false;btn.textContent='حفظ';
+  closeModal();
+  renderCurrentPage();
+  updateFilters();
+  if(currentPage!=='dashboard') renderDashboard();
+}
+
+function deleteRecord(collection,id){
+  if(!confirm('هل تريد حذف هذا السجل؟')) return;
+  DB[collection]=DB[collection].filter(r=>r.id!==id);
+  toast('تم الحذف');
+  renderCurrentPage();
+}
+
+// ══════════════════════════════════════════
+// TOAST
+// ══════════════════════════════════════════
+function toast(msg){
+  const el=document.getElementById('toast');
+  el.textContent=msg;el.classList.add('show');
+  setTimeout(()=>el.classList.remove('show'),3000);
+}
+
+// ══════════════════════════════════════════
+// START
+// ══════════════════════════════════════════
+updateFilters();
+renderDashboard();
+</script>
+</body>
+</html>
